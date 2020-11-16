@@ -59,7 +59,7 @@ INSERT INTO Customers ( Firstname, Lastname ) VALUES
 --create order for Tina smith bought and Iphone
 INSERT INTO Orders ( CustomerId, ProductId)  VALUES 
 
-( (SELECT CustomerId FROM Customers WHERE Firstname = 'Tina'), (SELECT ProductId FROM  Products WHERE Name = 'Iphone'));
+( (SELECT CustomerId FROM Customers WHERE Firstname = 'Tina'AND Lastname = 'Smith'), (SELECT ProductId FROM  Products WHERE Name = 'Iphone'));
 
 --report all orders by Tina Smith 
 SELECT * FROM  ORDERS 
